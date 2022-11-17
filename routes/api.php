@@ -21,3 +21,7 @@ Route::get('/clima',function () {
     $dados = json_decode(file_get_contents('https://api.hgbrasil.com/weather?format=json'), true); // Recebe os dados da API
     return $dados;
 });
+Route::get('/controle_ar',function () {
+    $api_retorno = json_decode(file_get_contents('https://api.waqi.info/feed/here/?token=77491dfc4cb9b1a0867aa232a6a2279fb28849d7'), true); // Recebe os dados da API
+    return $api_retorno;
+});
